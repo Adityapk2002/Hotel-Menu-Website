@@ -13,7 +13,7 @@ export default function Navbar() {
           {/* Menu Icon */}
           <button
             onClick={() => setOpen(true)}
-            className="px-2 text-white active:scale-95 "
+            className="px-2 text-white active:scale-95 cursor-pointer "
             aria-label="Open menu"
           >
             <Menu size={24} />

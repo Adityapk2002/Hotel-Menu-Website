@@ -47,7 +47,7 @@ export default function WeeklyTiming({ open, onClose }: Props) {
                 </h2>
                 <button
                   onClick={onClose}
-                  className="p-2 text-xl"
+                  className="p-2 text-xl cursor-pointer"
                 >
                   ✕
                 </button>
