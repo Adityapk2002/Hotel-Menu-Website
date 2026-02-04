@@ -1,6 +1,6 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion } from "motion/react"
 import Accordion from "../ui/Accordion"
 import Card from "../ui/Card"
 import { MENU } from "../data/menu"

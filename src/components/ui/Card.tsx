@@ -6,7 +6,7 @@ import Loader from "../ui/Loader"
 
 type CardProps = {
   title: string
-  description: string
+  description ?: string
   price: number
   image?: string
   isNew?: boolean
