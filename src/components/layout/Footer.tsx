@@ -12,13 +12,13 @@ const Footer = () => {
       className="h-[240px] w-[200px] object-contain"
     />
 
-    <h1 className="absolute z-10 rounded-md text-orange-600 font-bungee bottom-8 text-sm whitespace-nowrap ">
+    <h1 className="absolute z-10 rounded-md text-orange-500 font-cinzel bottom-8 text-sm whitespace-nowrap ">
       Loving the AdventVista experience?
     </h1>
   </div>
 
   {/* Normal flow text */}
-  <p className="mt-2 text-center">
+  <p className="mt-2 text-center font-cinzel">
     Check out our{" "}
     <a
       href="https://adventvista.com/"

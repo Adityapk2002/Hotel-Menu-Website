@@ -71,7 +71,7 @@ export default function Card({
 
       {/* CONTENT SECTION */}
       <div
-        className={`h-full py-2 px-3 flex flex-col justify-between bg-gray-100 ${
+        className={`h-full py-2 px-3 flex flex-col justify-between bg-[#1062AC]/10 ${
           image ? "w-1/2" : "w-full"
         }`}
       >
@@ -82,11 +82,11 @@ export default function Card({
             </span>
           )}
 
-          <h3 className="font-semibold font-dm text-lg leading-tight">
+          <h3 className="font-semibold font-nunito text-md leading-tight">
             {title}
           </h3>
 
-          <p className="text-sm font-dm text-gray-600 mt-1 line-clamp-2">
+          <p className="text-sm font-nunito text-gray-600 mt-1 line-clamp-2">
             {description}
           </p>
 
@@ -121,7 +121,7 @@ export default function Card({
         </div>
 
         {/* Price */}
-        <p className="font-semibold">
+        <p className="font-semibold font-nunito text-sm ">
           ₹{finalPrice.toLocaleString("en-IN")}
         </p>
       </div>

@@ -16,7 +16,7 @@ export default function Accordion({title , children} : AccordionProps){
       <button 
       onClick={() => setIsOpen(prev => !prev)}
       className="w-full flex justify-between items-center py-2 ">
-        <span className="text-2xl font-semibold font-dm">{title}</span>
+        <span className="text-2xl font-semibold font-cinzel">{title}</span>
 
           <motion.span
           animate={{ rotate: isOpen ? 180 : 0 }}

@@ -27,7 +27,7 @@ export const MENU: MenuSection[] = [
         title: "Thai Veg Soup Dumplings",
         description: "Miso Broth, Scented Veggie & Mushroom Dumplings",
         price: 375,
-        image: "https://images.unsplash.com/photo-1547592166-23ac45744acd",
+        image: "/images/carousel/HomePage1.webp",
         isNew: true,
       },
       {
@@ -35,7 +35,7 @@ export const MENU: MenuSection[] = [
         title: "T&S Minestrone",
         description: "Italian Broth Soup With Diced Pasta & Vegetables",
         price: 275,
-        image: "https://images.unsplash.com/photo-1547592166-23ac45744acd",
+        image: "/images/carousel/HomePage.webp",
       },
     ],
   },

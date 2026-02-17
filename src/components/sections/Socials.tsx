@@ -1,10 +1,11 @@
-import { Facebook, Instagram, MapPin } from "lucide-react"
+import { Facebook, MapPin } from "lucide-react"
+import Instagram from "../Icons/Instagram"
 
 const socialLinks = [
   {
     name: "Instagram",
     href: "https://www.instagram.com/",
-    icon: "instagram",
+    icon: "instagram"
   },
   {
     name: "Facebook",
@@ -26,7 +27,7 @@ const icons = {
 
 const HeroImage = () => {
   return (
-    <div className="w-full px-2">
+    <div className="w-full px-2 mb-4 border-b border-gray-200">
       {/* Social Icons */}
       <div className="flex gap-4 px-4 py-3 justify-end">
         {socialLinks.map((item) => {
@@ -41,19 +42,10 @@ const HeroImage = () => {
               aria-label={item.name}
               className="text-gray-700 hover:text-black transition-colors"
             >
-              <Icon className="h-5 w-5" />
+              <Icon className="h-6 w-6" />
             </a>
           )
         })}
-      </div>
-
-      {/* Hero Image */}
-      <div className="px-3 py-5">
-        <img
-          src="/images/branding/main.JPG"
-          alt="Hotel Branding"
-          className="w-full h-100 object-cover rounded-lg"
-        />
       </div>
     </div>
   )
