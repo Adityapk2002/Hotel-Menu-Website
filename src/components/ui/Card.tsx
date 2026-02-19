@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import { useEffect, useMemo, useState } from "react"
-import type { AddOn } from "../data/menu"
-import Loader from "../ui/Loader"
+import { useEffect, useMemo, useState } from "react";
+import type { AddOn } from "../data/menu";
+import Loader from "../ui/Loader";
 
 type CardProps = {
-  title: string
-  description ?: string
-  price: number
-  image?: string
-  isNew?: boolean
-  addOns?: AddOn[]
-}
+  title: string;
+  description?: string;
+  price: number;
+  image?: string;
+  isNew?: boolean;
+  addOns?: AddOn[];
+};
 
 export default function Card({
   title,
@@ -21,25 +21,25 @@ export default function Card({
   isNew,
   addOns,
 }: CardProps) {
-  const [selectedAddOn, setSelectedAddOn] = useState<AddOn | null>(null)
-  const [isImageLoaded, setIsImageLoaded] = useState(false)
-  const [showLoader, setShowLoader] = useState(false)
+  const [selectedAddOn, setSelectedAddOn] = useState<AddOn | null>(null);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+  const [showLoader, setShowLoader] = useState(false);
 
   useEffect(() => {
-    if (!image) return
+    if (!image) return;
 
     const timer = setTimeout(() => {
-      setShowLoader(true)
-    }, 150)
+      setShowLoader(true);
+    }, 150);
 
-    return () => clearTimeout(timer)
-  }, [image])
+    return () => clearTimeout(timer);
+  }, [image]);
 
   // Memoized price calculation
   const finalPrice = useMemo(
     () => price + (selectedAddOn?.price ?? 0),
-    [price, selectedAddOn]
-  )
+    [price, selectedAddOn],
+  );
 
   return (
     <div className="flex w-full h-40 rounded-lg bg-white overflow-hidden shadow-sm">
@@ -82,11 +82,11 @@ export default function Card({
             </span>
           )}
 
-          <h3 className="font-semibold font-nunito text-md leading-tight">
+          <h3 className="font-bold font-nunito text-md leading-tight">
             {title}
           </h3>
 
-          <p className="text-sm font-nunito text-gray-600 mt-1 line-clamp-2">
+          <p className="text-sm font-dm text-gray-600 mt-1 line-clamp-2">
             {description}
           </p>
 
@@ -94,17 +94,12 @@ export default function Card({
           {addOns && (
             <div className="mt-2 flex gap-2 flex-wrap">
               {addOns.map((addOn) => {
-                const isSelected =
-                  selectedAddOn?.label === addOn.label
+                const isSelected = selectedAddOn?.label === addOn.label;
 
                 return (
                   <button
                     key={addOn.label}
-                    onClick={() =>
-                      setSelectedAddOn(
-                        isSelected ? null : addOn
-                      )
-                    }
+                    onClick={() => setSelectedAddOn(isSelected ? null : addOn)}
                     aria-pressed={isSelected}
                     className={`text-xs px-2 py-1 rounded border transition-colors ${
                       isSelected
@@ -114,7 +109,7 @@ export default function Card({
                   >
                     + {addOn.label} ₹{addOn.price}
                   </button>
-                )
+                );
               })}
             </div>
           )}
@@ -126,5 +121,5 @@ export default function Card({
         </p>
       </div>
     </div>
-  )
+  );
 }

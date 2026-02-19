@@ -3,16 +3,15 @@ import type { Variants } from "motion/react";
 import { useEffect, useMemo, useState } from "react";
 
 export default function Carousel() {
-const slides = useMemo(
-  () => [
-    { src: "/images/carousel/HomePage.webp", alt: "Carnival ambience" },
-    { src: "/images/carousel/HomePage1.webp", alt: "Resort dining" },
-    { src: "/images/carousel/HomePage3.webp", alt: "Signature dishes" },
-    { src: "/images/carousel/carousel3.webp", alt: "Cocktails" },
-  ],
-  []
-);
-
+  const slides = useMemo(
+    () => [
+      { src: "/images/carousel/HomePage.webp", alt: "Carnival ambience" },
+      { src: "/images/carousel/HomePage1.webp", alt: "Resort dining" },
+      { src: "/images/carousel/HomePage3.webp", alt: "Signature dishes" },
+      { src: "/images/carousel/carousel3.webp", alt: "Cocktails" },
+    ],
+    [],
+  );
 
   const [[current, direction], setCurrent] = useState<[number, number]>([0, 1]);
   const total = slides.length;
