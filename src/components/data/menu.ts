@@ -175,4 +175,148 @@ export const MENU: MenuSection[] = [
       },
     ],
   },
+  {
+    category: "Bar",
+    title: "Cocktails",
+    items: [
+      {
+        id: "carnival-special-cocktail",
+        title: "Carnival Special Cocktail",
+        price: 949,
+        addOns: [],
+      },
+      {
+        id: "southern-rock",
+        title: "Southern Rock",
+        description:
+          "Jack Daniels Whiskey, Peach Syrup, Raspberry Syrup, Vodka, Sour Mix",
+        price: 999,
+        addOns: [],
+      },
+      {
+        id: "bubble-blaster-cocktail",
+        title: "Bubble Blaster Cocktail",
+        description: "Gin, Vodka, Triple Sec, Soda/Sprite",
+        price: 799,
+        addOns: [],
+      },
+      {
+        id: "whiskey-smash",
+        title: "Whiskey Smash",
+        description:
+          "4 Types Of Whiskey, Lemon Juice, Mint Leaves, Simple Syrup",
+        price: 799,
+        addOns: [],
+      },
+      {
+        id: "purple-rain",
+        title: "Purple Rain",
+        description: "Vodka, White Rum, Gin, Sprite, Blue Curacao, Lime Juice",
+        price: 799,
+        addOns: [],
+      },
+      {
+        id: "rainbow-paradise",
+        title: "Rainbow Paradise",
+        description:
+          "Vodka, Coconut Rum, Grenadine Syrup, Pineapple Juice, Sprite",
+        price: 749,
+        addOns: [],
+      },
+      {
+        id: "long-island-iced-tea",
+        title: "Long Island Iced Tea",
+        description:
+          "Five Types Of White Spirit, Lemon Juice, Sugar Syrup, Coke",
+        price: 749,
+        addOns: [],
+      },
+      {
+        id: "the-bouncer",
+        title: "The Bouncer",
+        description: "Tequila, Dark Rum, Vodka, Brandy, Coke or Red Bull",
+        price: 749,
+        addOns: [],
+      },
+      {
+        id: "classic-margarita",
+        title: "Classic Margarita (Pineapple / Strawberry / Coconut / Mango)",
+        description: "Tequila, Triple Sec, Lime Juice, Flavored Syrup",
+        price: 699,
+        addOns: [],
+      },
+      {
+        id: "sangria",
+        title: "Sangria",
+        description: "Gin, Brandy, Pomegranate Juice, Apple Juice",
+        price: 699,
+        addOns: [],
+      },
+      {
+        id: "mexican-tequila-martini",
+        title: "Mexican Tequila Martini",
+        description: "Martini Liquor, Olive, Vodka, Tequila, Sprite",
+        price: 649,
+        addOns: [],
+      },
+      {
+        id: "lemon-drop-martini",
+        title: "Lemon Drop Martini",
+        description: "Vodka, Lemon Juice, Martini Liquor",
+        price: 629,
+        addOns: [],
+      },
+      {
+        id: "tequila-sun-rise",
+        title: "Tequila Sun Rise",
+        description: "Grenadine Syrup, Tequila, Triple Sec, Lemon Juice",
+        price: 599,
+        addOns: [],
+      },
+      {
+        id: "cosmopolitan",
+        title: "Cosmopolitan",
+        description: "Vodka, Cointreau, Lime Juice, Cranberry Juice",
+        price: 599,
+        addOns: [],
+      },
+      {
+        id: "jungle-bird-cocktail",
+        title: "Jungle Bird Cocktail",
+        description:
+          "Pineapple Juice, Dark Rum, Brown Sugar, Campari Liquor, Lime Juice",
+        price: 529,
+        addOns: [],
+      },
+      {
+        id: "mojito",
+        title: "Mojito",
+        description:
+          "White Rum, Lime Juice, Sugar Syrup, Mint Syrup, Mint Leaves, Soda, Sprite",
+        price: 499,
+        addOns: [],
+      },
+      {
+        id: "whiskey-sour",
+        title: "Whiskey Sour",
+        description: "Whiskey, Lemon, Soda, Bitters",
+        price: 499,
+        addOns: [],
+      },
+      {
+        id: "green-screwdriver",
+        title: "Green Screwdriver",
+        description: "Blue Curacao, Vodka, Sprite, Orange Juice",
+        price: 499,
+        addOns: [],
+      },
+      {
+        id: "classic-hot-toddy",
+        title: "Classic Hot Toddy",
+        description: "Jim Beam Whiskey, Honey, Lime Juice, Hot Water",
+        price: 499,
+        addOns: [],
+      },
+    ],
+  },
 ];

@@ -5,12 +5,12 @@ const categories = [
   {
     title: "Veg",
     image: "/images/carousel/HomePage.webp",
-    href: "/beverages",
+    href: "/veg",
   },
   {
     title: "Non-veg",
     image: "/images/carousel/HomePage1.webp",
-    href: "/food",
+    href: "/nonveg",
   },
   {
     title: "Bar",
@@ -20,7 +20,7 @@ const categories = [
   {
     title: "Carnival",
     image: "/images/carousel/HomePage1.webp",
-    href: "/offers",
+    href: "/carnival",
   },
 ];
 export default function CategoryLanding() {

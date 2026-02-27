@@ -9,7 +9,7 @@ const Footer = () => {
       src="https://adventvista.com/assets/img/avbiglogo.jpeg"
       alt=" Logo"
       loading="lazy"
-      className="h-[240px] w-[200px] object-contain"
+      className="h-60 w-50 object-contain"
     />
 
     <h1 className="absolute z-10 rounded-md text-orange-500 font-cinzel bottom-8 text-sm whitespace-nowrap ">

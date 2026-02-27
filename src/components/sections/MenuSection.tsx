@@ -1,53 +1,39 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import Accordion from "../ui/Accordion";
 import Card from "../ui/Card";
 import { MENU } from "../data/menu";
 import { useNavigate, useParams } from "react-router-dom";
 import Carousel from "../ui/Carousel";
-import { ArrowLeft, Facebook, MapPin } from "lucide-react";
-import Instagram from "../Icons/Instagram";
+import { ArrowLeft } from "lucide-react";
+import Footer from "../layout/Footer";
 
 const CATEGORY_TITLE: Record<string, string> = {
-  beverages: "Veg",
-  food: "Non-veg",
+  veg: "Veg",
+  nonveg: "Non-veg",
   bar: "Bar",
-  offers: "Carnival",
+  carnival: "Carnival",
 };
 
-const socialLinks = [
-  {
-    name: "Instagram",
-    href: "https://www.instagram.com/",
-    icon: "instagram",
-  },
-  {
-    name: "Facebook",
-    href: "https://www.facebook.com/",
-    icon: "facebook",
-  },
-  {
-    name: "Google Maps",
-    href: "https://www.google.com/maps/place/Hotel+Carnival/",
-    icon: "map",
-  },
+// Category switch buttons
+const CATEGORIES = [
+  { id: "veg", label: "Veg" },
+  { id: "nonveg", label: "Non-veg" },
+  { id: "bar", label: "Bar" },
+  { id: "carnival", label: "Carnival" },
 ];
 
-const icons = {
-  instagram: Instagram,
-  facebook: Facebook,
-  map: MapPin,
-};
-
 export default function MenuSection() {
-  const { category } = useParams();
   const navigate = useNavigate();
+  const { category } = useParams();
+  const cleanCategory = category?.toLowerCase() || "";
 
-  const mappedCategory = CATEGORY_TITLE[category!];
+  const mappedCategory = CATEGORY_TITLE[cleanCategory];
 
   const filteredMenu = MENU.filter(
-    (section) => section.category === mappedCategory,
+    (section) =>
+      section.category.toLowerCase().replace("-", "") === cleanCategory,
   );
 
   return (
@@ -64,24 +50,17 @@ export default function MenuSection() {
             <h2 className="font-semibold text-2xl">{mappedCategory}</h2>
           </div>
 
-          {/* RIGHT SIDE SOCIAL ICONS */}
-          <div className="flex gap-2 items-center">
-            {socialLinks.map((item) => {
-              const Icon = icons[item.icon as keyof typeof icons];
-
-              return (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={item.name}
-                  className="p-2 rounded-full hover:bg-gray-100 transition"
-                >
-                  <Icon className="h-5 w-5 sm:h-6 sm:w-6 text-gray-700" />
-                </a>
-              );
-            })}
+          {/* 🔥 RIGHT SIDE CATEGORY BUTTONS */}
+          <div className="flex gap-2 overflow-x-auto">
+            {CATEGORIES.filter((cat) => cat.id !== cleanCategory).map((cat) => (
+              <button
+                key={cat.id}
+                onClick={() => navigate(`/menu/${cat.id}`)}
+                className={`px-3 py-1 text-md sm:text-sm rounded-full whitespace-nowrap transition bg-black text-white cursor-pointer`}
+              >
+                {cat.label}
+              </button>
+            ))}
           </div>
         </div>
       </div>
@@ -92,7 +71,7 @@ export default function MenuSection() {
       </div>
 
       {/* MENU */}
-      <div className="px-2 space-y-4 pb-10">
+      <div className="px-2 space-y-2 pb-10">
         {filteredMenu.map((section) => (
           <Accordion key={section.title} title={section.title}>
             <div className="space-y-6">
@@ -114,6 +93,7 @@ export default function MenuSection() {
           </Accordion>
         ))}
       </div>
+      <Footer />
     </>
   );
 }

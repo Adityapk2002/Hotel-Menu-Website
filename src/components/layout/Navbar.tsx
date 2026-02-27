@@ -20,7 +20,7 @@ export default function Navbar() {
               <Menu size={26} />
             </button>
 
-            <h1 className="text-xl font-extrabold sm:text-2xl font-nunito tracking-tight">
+            <h1 className="text-xl font-bold sm:text-2xl font-nunito tracking-tight">
               Carnival Resorts
             </h1>
           </div>
