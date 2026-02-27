@@ -64,7 +64,7 @@ export default function MenuSection() {
               <ArrowLeft />
             </button>
 
-            <h2 className="font-semibold text-2xl">{mappedCategory}</h2>
+            <h2 className="font-lg font-nunito text-2xl">{mappedCategory}</h2>
           </div>
 
           {/* RIGHT SIDE SOCIAL ICONS */}
@@ -76,7 +76,7 @@ export default function MenuSection() {
         </div>
       </div>
 
-      <div className="relative flex items-center justify-between px-2 border-b border-gray-200">
+      <div className="sticky top-14 z-20 bg-white relative flex items-center justify-between px-2 border-b border-gray-200">
         {/* LEFT SIDE */}
         <div className="flex gap-2 p-3 ">
           {CATEGORIES.filter((cat) => cat.id !== cleanCategory).map((cat) => (
@@ -146,12 +146,12 @@ export default function MenuSection() {
       </div>
 
       {/* CAROUSEL */}
-      <div className="mt-2">
+      <div className="mt-4">
         <Carousel />
       </div>
 
       {/* MENU */}
-      <div className="px-2 space-y-4 pb-10 ">
+      <div className="px-2 space-y-4 pb-10 mt-4 ">
         {filteredMenu.map((section) => {
           const safeId = createSafeId(section.title);
 

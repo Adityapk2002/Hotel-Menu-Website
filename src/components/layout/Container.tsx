@@ -1,6 +1,5 @@
 import { cn } from "../../lib/utils";
 
-
 interface ContainerProps {
   children: React.ReactNode;
   className?: string;
@@ -8,7 +7,7 @@ interface ContainerProps {
 
 export function Container({ children, className }: ContainerProps) {
   return (
-    <div className={cn("relative  mx-auto max-w-[475px] overflow-hidden", className)}>
+    <div className={cn("relative  mx-auto max-w-[475px] ", className)}>
       {children}
     </div>
   );
