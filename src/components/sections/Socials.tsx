@@ -40,7 +40,7 @@ const SocialLinks = () => {
             aria-label={item.name}
             className="text-gray-700 hover:text-black transition-colors"
           >
-            <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
+            <Icon className="h-6 sm:w-6" />
           </a>
         );
       })}

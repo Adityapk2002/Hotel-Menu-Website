@@ -42,9 +42,9 @@ export default function CategoryLanding() {
             className="relative w-full h-35  overflow-hidden cursor-pointer"
           >
             <img src={cat.image} className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-black/40" />
+            <div className="absolute inset-0 bg-black/50" />
             <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-white text-xl font-semibold uppercase tracking-wide text-center px-3">
+              <span className="text-white text-3xl font-semibold uppercase tracking-wide text-center px-3">
                 {cat.title}
               </span>
             </div>
