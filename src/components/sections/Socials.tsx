@@ -4,17 +4,17 @@ import Instagram from "../Icons/Instagram";
 const socialLinks = [
   {
     name: "Instagram",
-    href: "https://www.instagram.com/",
+    href: "https://www.instagram.com/carnival_resort_latur/",
     icon: "instagram",
   },
   {
     name: "Facebook",
-    href: "https://www.facebook.com/",
+    href: "https://www.instagram.com/carnival_resort_latur",
     icon: "facebook",
   },
   {
     name: "Google Maps",
-    href: "https://www.google.com/maps/place/Hotel+Carnival/",
+    href: "https://maps.app.goo.gl/ZWUs83FKAwYKscUh9",
     icon: "map",
   },
 ];

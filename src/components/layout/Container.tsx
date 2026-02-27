@@ -7,7 +7,12 @@ interface ContainerProps {
 
 export function Container({ children, className }: ContainerProps) {
   return (
-    <div className={cn("relative  mx-auto max-w-[475px] ", className)}>
+    <div
+      className={cn(
+        "relative  mx-auto max-w-[475px] overflow-x-clip",
+        className,
+      )}
+    >
       {children}
     </div>
   );

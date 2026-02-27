@@ -23,6 +23,7 @@ const categories = [
     href: "/carnival",
   },
 ];
+
 export default function CategoryLanding() {
   const navigate = useNavigate();
   return (
