@@ -9,7 +9,7 @@ const socialLinks = [
   },
   {
     name: "Facebook",
-    href: "https://www.instagram.com/carnival_resort_latur",
+    href: "https://www.facebook.com/carnivalresort.latur/",
     icon: "facebook",
   },
   {
