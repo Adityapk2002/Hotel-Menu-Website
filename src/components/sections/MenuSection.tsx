@@ -7,6 +7,7 @@ import Carousel from "../ui/Carousel";
 import { ArrowLeft, Search, SlidersVertical, X } from "lucide-react";
 import Footer from "../layout/Footer";
 import { useState, useCallback, useRef, useMemo } from "react";
+import { getFoodType } from "../data/menu/utils";
 
 const CATEGORIES = [
   { id: "veg", label: "Veg" },
@@ -245,7 +246,7 @@ export default function MenuSection() {
                         ease: "easeOut",
                       }}
                     >
-                      <Card {...item} />
+                      <Card {...item} type={getFoodType(section.category)} />
                     </motion.div>
                   ))}
                 </div>

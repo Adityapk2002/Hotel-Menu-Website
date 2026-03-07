@@ -11,6 +11,7 @@ type CardProps = {
   image?: string;
   isNew?: boolean;
   addOns?: AddOn[];
+  type?: "veg" | "nonveg" | "bar";
 };
 
 export default function Card({
@@ -20,6 +21,7 @@ export default function Card({
   image,
   isNew,
   addOns,
+  type,
 }: CardProps) {
   const [selectedAddOn, setSelectedAddOn] = useState<AddOn | null>(null);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
@@ -43,7 +45,7 @@ export default function Card({
   }, [price, selectedAddOn]);
 
   return (
-    <div className="flex w-full h-40 rounded-lg bg-white overflow-hidden shadow-sm">
+    <div className="relative flex w-full h-40 rounded-lg bg-white overflow-hidden shadow-sm">
       {/* IMAGE SECTION */}
       {image && (
         <div className="relative w-1/2 h-full bg-gray-200 overflow-hidden">
@@ -83,9 +85,25 @@ export default function Card({
             </span>
           )}
 
-          <h3 className="font-bold font-nunito text-md leading-tight">
-            {title}
-          </h3>
+          <div className="flex gap-2 items-center">
+            {type && (
+              <img
+                src={
+                  type === "veg"
+                    ? "/src/assets/veg.svg"
+                    : type === "nonveg"
+                      ? "/src/assets/nonveg.svg"
+                      : "/src/assets/bar.svg"
+                }
+                alt={type}
+                className="h-4 w-4"
+              />
+            )}
+
+            <h3 className="font-bold font-nunito text-md leading-tight">
+              {title}
+            </h3>
+          </div>
 
           <p className="text-sm font-dm text-gray-600 mt-1 line-clamp-2">
             {description}
