@@ -1,13 +1,13 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import type { AddOn } from "../data/menu";
 import Loader from "../ui/Loader";
+import type { AddOn, Price } from "../data/menu/types";
 
 type CardProps = {
   title: string;
   description?: string;
-  price: number;
+  price: Price;
   image?: string;
   isNew?: boolean;
   addOns?: AddOn[];
@@ -36,10 +36,11 @@ export default function Card({
   }, [image]);
 
   // Memoized price calculation
-  const finalPrice = useMemo(
-    () => price + (selectedAddOn?.price ?? 0),
-    [price, selectedAddOn],
-  );
+  const finalPrice = useMemo(() => {
+    const basePrice = typeof price === "number" ? price : price.half;
+
+    return basePrice + (selectedAddOn?.price ?? 0);
+  }, [price, selectedAddOn]);
 
   return (
     <div className="flex w-full h-40 rounded-lg bg-white overflow-hidden shadow-sm">
@@ -116,8 +117,15 @@ export default function Card({
         </div>
 
         {/* Price */}
-        <p className="font-semibold font-nunito text-sm ">
-          ₹{finalPrice.toLocaleString("en-IN")}
+        <p className="font-semibold font-nunito text-sm">
+          {typeof price === "number" ? (
+            <>₹{finalPrice.toLocaleString("en-IN")}</>
+          ) : (
+            <>
+              ₹{price.half.toLocaleString("en-IN")} / ₹
+              {price.full.toLocaleString("en-IN")}
+            </>
+          )}
         </p>
       </div>
     </div>

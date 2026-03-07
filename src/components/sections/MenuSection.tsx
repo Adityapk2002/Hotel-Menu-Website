@@ -189,7 +189,7 @@ export default function MenuSection() {
               />
 
               <motion.div
-                className="absolute top-full right-0 w-72 bg-white shadow-xl z-50 border-t border-gray-200"
+                className="absolute top-full right-0 w-72 max-h-[70vh] overflow-y-auto bg-white shadow-xl z-50 border-t border-gray-200"
                 initial={{ x: 40, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 exit={{ x: 40, opacity: 0 }}
