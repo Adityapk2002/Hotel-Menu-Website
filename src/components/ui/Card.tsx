@@ -85,7 +85,7 @@ export default function Card({
             </span>
           )}
 
-          <div className="flex gap-2 items-center">
+          <div className="flex items-start gap-2">
             {type && (
               <img
                 src={
@@ -96,7 +96,7 @@ export default function Card({
                       : "/src/assets/bar.svg"
                 }
                 alt={type}
-                className="h-4 w-4"
+                className="h-4 w-4 mt-0.5 shrink-0"
               />
             )}
 

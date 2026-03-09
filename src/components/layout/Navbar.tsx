@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu } from "lucide-react";
-import WeeklyTiming from "../sections/WeeklyTiming";
+import WeeklyTiming from "../sections/About";
 import SocialLinks from "../sections/Socials";
 
 export default function Navbar() {

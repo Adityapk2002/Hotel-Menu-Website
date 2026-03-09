@@ -88,12 +88,14 @@ export const vegMenu: MenuSection[] = [
       {
         id: "carnival-special-mocktail",
         title: "Carnival Special Mocktail",
+        image: "/public/images/hotel/juice.JPG",
         description: "Our signature non alcoholic creation.",
         price: 249,
       },
       {
         id: "fruit-explosion",
         title: "Fruit Explosion",
+        image: "/public/images/hotel/juice.JPG",
         description:
           "Mix fruit juice strawberry ice cream grenadine syrup coconut syrup fruit toppings.",
         price: 229,
@@ -101,6 +103,7 @@ export const vegMenu: MenuSection[] = [
       {
         id: "coconut-guava-margarita",
         title: "Coconut Guava Margarita",
+        image: "/public/images/hotel/juice.JPG",
         description:
           "Guava juice coco syrup lime juice mint leaves coconut powder.",
         price: 229,

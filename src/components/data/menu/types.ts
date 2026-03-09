@@ -15,7 +15,7 @@ export type MenuItem = {
 };
 
 export type MenuSection = {
-  category: "Veg" | "Non-veg" | "Bar" | "Carnival";
+  category: "Veg" | "Non-veg" | "Bar";
   title: string;
   items: MenuItem[];
 };
